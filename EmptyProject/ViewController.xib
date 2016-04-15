@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
+            <connections>
+                <outlet property="loadingBackupIndicator" destination="nuV-2e-Y9A" id="fEM-BJ-drG"/>
+                <outlet property="loadingIndicatorLabel" destination="0xR-uV-1o5" id="sRO-at-qP3"/>
+                <outlet property="myTableView" destination="lzX-jM-Psl" id="jbv-eW-Gzf"/>
+                <outlet property="showFilesBtn" destination="7Lt-zq-2Jj" id="fLY-df-Rc8"/>
+                <outlet property="uploadBtn" destination="EU2-EN-E65" id="eZK-Zc-dfG"/>
+                <outlet property="view" destination="iN0-l3-epB" id="uny-OS-T4h"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EU2-EN-E65">
+                    <rect key="frame" x="218" y="82" width="94" height="30"/>
+                    <color key="backgroundColor" red="0.27131731730000003" green="0.63427948410000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Upload"/>
+                    <connections>
+                        <action selector="uploadBtnTapped:" destination="-1" eventType="touchUpInside" id="VMw-6x-MFV"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lzX-jM-Psl">
+                    <rect key="frame" x="0.0" y="133" width="320" height="347"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="79U-nl-ysS"/>
+                        <outlet property="delegate" destination="-1" id="GKz-cj-c9b"/>
+                    </connections>
+                </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="nuV-2e-Y9A">
+                    <rect key="frame" x="142" y="225" width="20" height="20"/>
+                </activityIndicatorView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Lt-zq-2Jj">
+                    <rect key="frame" x="89" y="78" width="114" height="30"/>
+                    <color key="backgroundColor" red="0.43921568630000002" green="0.34509803919999998" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="ShowiCloudFiles">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="showFilesBtnTapped:" destination="-1" eventType="touchUpInside" id="7iH-mZ-O1j"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xR-uV-1o5">
+                    <rect key="frame" x="8" y="82" width="64" height="21"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="1133" y="435"/>
+        </view>
+    </objects>
+</document>
